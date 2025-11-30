@@ -1,0 +1,5 @@
+{
+  "name": "Project Polaris - Deep Dive Report",
+  "description": "A high-security, immersive technical design report for the 'Polaris' conversational system, featuring strict latency budgets and cognitive architecture analysis.",
+  "requestFramePermissions": []
+}
