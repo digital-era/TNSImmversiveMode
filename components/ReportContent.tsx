@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FileKey, Cpu, Brain, Activity, Layers, Eye, ShieldCheck, Box, Zap, LogOut, Hash, ArrowDown } from 'lucide-react';
+import { FileKey, Cpu, Brain, Activity, Layers, Eye, ShieldCheck, Box, Zap, LogOut, Hash, Sparkles, Network } from 'lucide-react';
 import { LatencyChart } from './LatencyChart';
 
 interface ReportContentProps {
@@ -50,7 +50,7 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
           <div className="flex items-center space-x-3">
             <Box className="w-6 h-6 text-polaris-accent animate-pulse-slow" />
             <h1 className="font-bold text-white tracking-tight text-lg">PROJECT <span className="text-polaris-accent">对话北极星</span></h1>
-            <span className="hidden md:inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-polaris-800 text-slate-400 border border-slate-700">V2.0</span>
+            <span className="hidden md:inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-polaris-800 text-slate-400 border border-slate-700">V3.0</span>
           </div>
           <div className="flex items-center space-x-6">
              <div className="hidden md:flex flex-col items-end">
@@ -120,7 +120,7 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">《对话北极星》“沉浸模式”深度拆解设计报告</h2>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm font-mono text-slate-400 mt-4">
               <span className="flex items-center"><ShieldCheck className="w-4 h-4 mr-2 text-polaris-accent" /> 文件密级：绝密/核心架构</span>
-              <span className="flex items-center"><Activity className="w-4 h-4 mr-2 text-polaris-accent" /> 版本：V2.0</span>
+              <span className="flex items-center"><Activity className="w-4 h-4 mr-2 text-polaris-accent" /> 版本：V3.0</span>
             </div>
           </motion.div>
 
@@ -136,20 +136,35 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
               <div className="p-2 bg-polaris-800 rounded border border-slate-700">
                   <Brain className="w-6 h-6 text-polaris-accent" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white">一、功能蓝图：基于第一性原理的系统架构</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white">一、功能蓝图：双相认知共鸣</h3>
             </div>
             
+            <div className="glass-panel p-6 rounded-lg mb-6">
+                <p className="text-sm leading-relaxed text-slate-400 mb-4">
+                    系统超越传统检索，构建 <strong className="text-white">知识保真 (Intellectual Fidelity)</strong> 与 <strong className="text-white">灵魂共鸣</strong> 的场域。
+                    交互遵循“先立后破”范式，即 <strong className="text-polaris-accent">双相认知共鸣 (Biphasic Cognitive Resonance)</strong>。
+                </p>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6">
-               <div className="glass-panel p-6 rounded-lg border-l-4 border-l-polaris-accent">
-                  <h4 className="text-lg font-bold text-white mb-2">知识保真 (Intellectual Fidelity)</h4>
-                  <p className="text-sm leading-relaxed text-slate-400">
-                    系统首要原则。确保虚拟人物的知识体系、哲学立场在历史和学术语境中高度准确。摒弃 LLM 的“平均化人格”，基于 <strong className="text-polaris-accent">Big-Five (OCEAN)</strong> 模型构建约束。
+               <div className="group relative p-6 rounded-lg bg-slate-900/40 border border-slate-800 hover:border-polaris-accent/50 transition-all">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-polaris-accent rounded-l"></div>
+                  <div className="flex items-center justify-between mb-3">
+                     <h4 className="text-lg font-bold text-white">Phase 1: 本质直击</h4>
+                     <span className="text-[10px] font-mono uppercase bg-polaris-accent/10 text-polaris-accent px-2 py-0.5 rounded">Essentialism Hit</span>
+                  </div>
+                  <p className="text-sm text-slate-400">
+                    作为“智慧结晶体”，基于角色独特的哲学观给出极具穿透力的直接洞见，满足用户“下载大师思想精髓”的初衷。
                   </p>
                </div>
-               <div className="glass-panel p-6 rounded-lg border-l-4 border-l-purple-500">
-                  <h4 className="text-lg font-bold text-white mb-2">反依赖设计 (Anti-Dependency)</h4>
-                  <p className="text-sm leading-relaxed text-slate-400">
-                    AI 不是全知先知，而是 <strong className="text-purple-400">苏格拉底式引导者</strong>。通过“差距提示”指出用户逻辑漏洞，利用 CoT 外化推理过程，建立信任。
+               <div className="group relative p-6 rounded-lg bg-slate-900/40 border border-slate-800 hover:border-purple-500/50 transition-all">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-purple-500 rounded-l"></div>
+                  <div className="flex items-center justify-between mb-3">
+                     <h4 className="text-lg font-bold text-white">Phase 2: 思维邀约</h4>
+                     <span className="text-[10px] font-mono uppercase bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded">Invitation</span>
+                  </div>
+                  <p className="text-sm text-slate-400">
+                    转化为“思维催化剂”，将大师观点作为基石，抛出延展性问题，邀请用户进入该思维模型共建。
                   </p>
                </div>
             </div>
@@ -167,31 +182,30 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
               <div className="p-2 bg-polaris-800 rounded border border-slate-700">
                   <Zap className="w-6 h-6 text-yellow-400" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white">二、物理学第一性原理：端到端延迟约束</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white">二、物理约束：双轨制延迟预算</h3>
             </div>
 
             <div className="glass-panel p-6 rounded-xl">
                <div className="flex justify-between items-end mb-4">
-                  <div className="max-w-2xl">
-                      <p className="text-sm text-slate-400">
-                          “沉浸感”的物理本质是对 <strong className="text-white">Motion-to-Photon (MTP)</strong> 延迟的极致控制。
-                          为防止晕动症 (Motion Sickness)，强制执行 <span className="text-red-400 font-mono font-bold">&lt;30ms</span> 总预算。
+                  <div className="max-w-3xl">
+                      <p className="text-sm text-slate-400 mb-2">
+                          依据丹尼尔·卡尼曼的 <strong className="text-white">双系统理论 (System 1/2)</strong>，
+                          我们将交互拆分为 <span className="text-yellow-400">“直觉反应”</span> 与 <span className="text-indigo-400">“理性回复”</span> 两条异步轨道。
+                      </p>
+                      <p className="text-xs font-mono text-slate-500">
+                          目标：Motion-to-Photon (MTP) &lt; 30ms (晕动症阈值)
                       </p>
                   </div>
                </div>
                <LatencyChart />
-               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono text-slate-500">
-                  <div className="p-3 bg-slate-900/50 rounded border border-slate-800">
-                      <span className="block text-polaris-accent font-bold mb-1">L2: QUIC协议</span>
-                      防止TCP队头阻塞，保障5G网络下的传输稳定性。
+               <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono text-slate-500">
+                  <div className="p-3 bg-yellow-900/10 border border-yellow-900/30 rounded">
+                      <span className="block text-yellow-400 font-bold mb-1">System 1 (直觉轨)</span>
+                      在VAD触发瞬间生成非语言信号（点头、语气词），建立即时连接，掩盖后台计算。
                   </div>
-                  <div className="p-3 bg-slate-900/50 rounded border border-slate-800">
-                      <span className="block text-indigo-400 font-bold mb-1">L3/4: 并行流水线</span>
-                      推测性采样生成草稿，同时启动3DGS渲染，打破串行瓶颈。
-                  </div>
-                  <div className="p-3 bg-slate-900/50 rounded border border-slate-800">
-                      <span className="block text-purple-400 font-bold mb-1">L5: ATW补偿</span>
-                      异步时间扭曲技术，在最后显示阶段修正头部运动带来的丢帧。
+                  <div className="p-3 bg-indigo-900/10 border border-indigo-900/30 rounded">
+                      <span className="block text-indigo-400 font-bold mb-1">System 2 (理性轨)</span>
+                      异步并行执行GraphRAG与审查，计算完成后无缝拼接入音频流。
                   </div>
                </div>
             </div>
@@ -207,42 +221,60 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
           >
             <div className="flex items-center space-x-3 mb-6">
               <div className="p-2 bg-polaris-800 rounded border border-slate-700">
-                  <Layers className="w-6 h-6 text-green-400" />
+                  <Network className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white">三、逻辑架构：人格代理与知识增强</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white">三、逻辑架构：分层流式输出</h3>
             </div>
 
-            {/* Subsection 3.1: 5-Layer Cognitive Model */}
+            {/* Subsection 3.1: Layered Streaming Model */}
             <div className="mb-10">
                <h4 className="text-lg font-bold text-slate-200 mb-6 flex items-center">
-                  <span className="text-polaris-accent mr-2">3.1</span> 抽象架构层级：五层认知模型
+                  <span className="text-polaris-accent mr-2">3.1</span> 核心流控：分层异步流水线
                </h4>
-               <div className="glass-panel p-6 rounded-xl border border-slate-800/60 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-b from-polaris-900/0 via-polaris-900/0 to-polaris-900/50 pointer-events-none"></div>
+               <div className="space-y-4">
+                  {/* Level 0 */}
+                  <div className="flex group">
+                      <div className="w-24 pt-4 flex flex-col items-center border-r border-slate-800">
+                          <span className="text-xs font-mono text-slate-500">0-50ms</span>
+                          <div className="w-2 h-2 rounded-full bg-slate-600 mt-2 group-hover:bg-yellow-400 transition-colors"></div>
+                      </div>
+                      <div className="flex-1 p-4 ml-4 bg-slate-900/40 border border-slate-800 rounded group-hover:border-slate-600 transition-all">
+                          <div className="flex items-center space-x-2 mb-2">
+                              <span className="px-2 py-0.5 text-[10px] font-bold bg-slate-800 text-white rounded">LEVEL 0</span>
+                              <h5 className="text-sm font-bold text-slate-200">生物性反应 (Biological Reaction)</h5>
+                          </div>
+                          <p className="text-xs text-slate-400">纯视觉与副语言。瞳孔微缩、吸气、头部微侧。由边缘端模型直接映射。</p>
+                      </div>
+                  </div>
                   
-                  <div className="flex flex-col space-y-2">
-                     {[
-                        { level: 1, name: '输入层', desc: '接收视觉、音频、头部追踪（6DoF）及生理信号', icon: 'INPUT', color: 'border-slate-600' },
-                        { level: 2, name: '特征层', desc: '提取面部 AU (Action Units)、语调韵律、语义 Embedding', icon: 'FEATURE', color: 'border-slate-500' },
-                        { level: 3, name: '融合层', desc: '多模态对齐 (MMA)，确保语音内容与面部微表情时间同步', icon: 'FUSION', color: 'border-blue-500/50' },
-                        { level: 4, name: '推理层', desc: '核心 LLM Agent、知识图谱 (KG)、约束控制器', icon: 'REASON', color: 'border-polaris-accent' },
-                        { level: 5, name: '生成层', desc: '神经渲染引擎 (3DGS)、空间音频合成', icon: 'OUTPUT', color: 'border-purple-500' },
-                     ].map((layer, index) => (
-                        <div key={layer.level} className="relative group">
-                           {index !== 0 && (
-                              <div className="absolute left-6 -top-2 w-px h-2 bg-slate-700 group-hover:bg-polaris-accent transition-colors"></div>
-                           )}
-                           <div className={`flex items-center p-3 rounded bg-slate-900/40 border ${layer.color} hover:bg-slate-800/60 transition-all`}>
-                              <div className="flex-shrink-0 w-12 h-8 flex items-center justify-center bg-slate-950 rounded border border-slate-800 font-mono text-xs text-slate-400">
-                                 L{layer.level}
-                              </div>
-                              <div className="ml-4 flex-grow grid md:grid-cols-[120px_1fr] gap-2 items-center">
-                                 <div className="font-bold text-white">{layer.name}</div>
-                                 <div className="text-xs text-slate-400 font-mono">{layer.desc}</div>
-                              </div>
-                           </div>
-                        </div>
-                     ))}
+                  {/* Level 1 */}
+                   <div className="flex group">
+                      <div className="w-24 pt-4 flex flex-col items-center border-r border-slate-800">
+                          <span className="text-xs font-mono text-slate-500">50-200ms</span>
+                          <div className="w-2 h-2 rounded-full bg-slate-600 mt-2 group-hover:bg-polaris-accent transition-colors"></div>
+                      </div>
+                      <div className="flex-1 p-4 ml-4 bg-slate-900/40 border border-slate-800 rounded group-hover:border-polaris-accent/50 transition-all">
+                          <div className="flex items-center space-x-2 mb-2">
+                              <span className="px-2 py-0.5 text-[10px] font-bold bg-polaris-accent/20 text-polaris-accent rounded">LEVEL 1</span>
+                              <h5 className="text-sm font-bold text-slate-200">语义填充 (Semantic Filler)</h5>
+                          </div>
+                          <p className="text-xs text-slate-400">具有角色特征的短语 (e.g., "Interesting perspective...")。由 SLM 快速生成。</p>
+                      </div>
+                  </div>
+
+                  {/* Level 2 */}
+                   <div className="flex group">
+                      <div className="w-24 pt-4 flex flex-col items-center border-r border-slate-800">
+                          <span className="text-xs font-mono text-slate-500">&gt;200ms</span>
+                          <div className="w-2 h-2 rounded-full bg-slate-600 mt-2 group-hover:bg-purple-500 transition-colors"></div>
+                      </div>
+                      <div className="flex-1 p-4 ml-4 bg-slate-900/40 border border-slate-800 rounded group-hover:border-purple-500/50 transition-all">
+                          <div className="flex items-center space-x-2 mb-2">
+                              <span className="px-2 py-0.5 text-[10px] font-bold bg-purple-500/20 text-purple-400 rounded">LEVEL 2</span>
+                              <h5 className="text-sm font-bold text-slate-200">核心认知载荷 (Core Payload)</h5>
+                          </div>
+                          <p className="text-xs text-slate-400">核心洞见与思维邀约。主 LLM 后台计算，文本流无缝拼接至 Level 1 音频尾部。</p>
+                      </div>
                   </div>
                </div>
             </div>
@@ -250,38 +282,45 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
             {/* Subsection 3.2: Modules Grid */}
              <div className="mb-6">
                 <h4 className="text-lg font-bold text-slate-200 mb-6 flex items-center">
-                  <span className="text-polaris-accent mr-2">3.2</span> 核心逻辑模块：人格保真体系
+                  <span className="text-polaris-accent mr-2">3.2</span> 人格代理结构 (Maker-Checker)
                </h4>
                 <div className="relative overflow-hidden glass-panel rounded-xl">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-teal-400 to-emerald-500"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-blue-500 to-purple-500"></div>
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-800">
                       <div className="p-6 hover:bg-slate-800/30 transition-colors">
-                          <div className="text-xs font-mono text-slate-500 mb-2">MODULE 01</div>
-                          <h4 className="font-bold text-white mb-2">知识检索层</h4>
-                          <p className="text-xs text-slate-400 mb-3">GraphRAG + 矢量数据库</p>
-                          <p className="text-sm text-slate-300">访问历史事实，提供跨学科多跳推理，确保上下文准确。</p>
+                          <div className="text-[10px] font-mono text-yellow-500 mb-2 uppercase">System 1</div>
+                          <h4 className="font-bold text-white mb-2">直觉反应器</h4>
+                          <p className="text-xs text-slate-400 mb-3">SLM (3B) + Rule Engine</p>
+                          <p className="text-sm text-slate-300">生成即时微表情与填充语，维持对话热度。</p>
                       </div>
                       <div className="p-6 hover:bg-slate-800/30 transition-colors">
-                          <div className="text-xs font-mono text-slate-500 mb-2">MODULE 02</div>
+                          <div className="text-[10px] font-mono text-indigo-400 mb-2 uppercase">System 2</div>
+                          <h4 className="font-bold text-white mb-2">知识检索层</h4>
+                          <p className="text-xs text-slate-400 mb-3">GraphRAG</p>
+                          <p className="text-sm text-slate-300">访问历史事实，构建高保真知识图谱上下文。</p>
+                      </div>
+                      <div className="p-6 hover:bg-slate-800/30 transition-colors">
+                          <div className="text-[10px] font-mono text-indigo-400 mb-2 uppercase">System 2</div>
                           <h4 className="font-bold text-white mb-2">人格风格层</h4>
-                          <p className="text-xs text-slate-400 mb-3">Style Transfer + ICL</p>
+                          <p className="text-xs text-slate-400 mb-3">Style Transfer</p>
                           <p className="text-sm text-slate-300">锁定角色的修辞、词汇习惯、语速与口癖。</p>
                       </div>
                       <div className="p-6 hover:bg-slate-800/30 transition-colors relative">
-                          <div className="absolute top-2 right-2 text-[10px] bg-polaris-accent/20 text-polaris-accent px-1.5 py-0.5 rounded border border-polaris-accent/30">CHECKER</div>
-                          <div className="text-xs font-mono text-slate-500 mb-2">MODULE 03</div>
-                          <h4 className="font-bold text-white mb-2">约束遵循层</h4>
-                          <p className="text-xs text-slate-400 mb-3">Constitutional AI + DPO</p>
-                          <p className="text-sm text-slate-300">审查道德、历史设定及哲学一致性，防止“幻觉”。</p>
-                      </div>
-                      <div className="p-6 hover:bg-slate-800/30 transition-colors">
-                          <div className="text-xs font-mono text-slate-500 mb-2">MODULE 04</div>
-                          <h4 className="font-bold text-white mb-2">反依赖层</h4>
-                          <p className="text-xs text-slate-400 mb-3">Socratic Prompting</p>
-                          <p className="text-sm text-slate-300">识别逻辑漏洞，生成引导性提问，激发用户批判思维。</p>
+                          <div className="absolute top-2 right-2 text-[10px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded border border-purple-500/30">CORE</div>
+                          <div className="text-[10px] font-mono text-purple-400 mb-2 uppercase">System 2</div>
+                          <h4 className="font-bold text-white mb-2">洞见与邀约层</h4>
+                          <p className="text-xs text-slate-400 mb-3">T-A-Q Structure</p>
+                          <p className="text-sm text-slate-300">执行 Thesis (观点) -> Application (应用) -> Question (邀约) 逻辑。</p>
                       </div>
                   </div>
                 </div>
+            </div>
+            
+            <div className="glass-panel p-6 rounded-lg border-l-4 border-l-cyan-500">
+               <h4 className="text-sm font-bold text-white mb-2">技术修正：预测性口型 (Visual Pre-emption)</h4>
+               <p className="text-xs leading-relaxed text-slate-400">
+                 为解决音画同步，系统执行“视觉抢跑”。TTS在生成音频波形前先行解算音素，视觉信号提前 <span className="text-white font-mono">20-30ms</span> 发送至渲染引擎。当声音通过物理空气传播时，口型光子恰好到达视网膜，实现物理级同步。
+               </p>
             </div>
           </motion.section>
 
@@ -297,55 +336,58 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
               <div className="p-2 bg-polaris-800 rounded border border-slate-700">
                   <Eye className="w-6 h-6 text-pink-400" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-white">四、交互美学：通感 (Synesthesia)</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white">四、交互美学：情绪积分迟滞系统</h3>
             </div>
 
             <div className="glass-panel rounded-xl overflow-hidden border border-slate-800">
+                <div className="p-4 bg-slate-900/50 border-b border-slate-800 text-xs text-slate-500">
+                   环境变化不再是对单句情绪的瞬时反应，而是对对话“势能”的宏观映射 (Integral Pool & Hysteresis)。
+                </div>
                 <table className="w-full text-left border-collapse">
                     <thead>
                         <tr className="bg-slate-900/80 border-b border-slate-700 text-xs uppercase tracking-wider text-slate-400">
-                            <th className="p-4 font-medium hidden sm:table-cell">情感状态</th>
-                            <th className="p-4 font-medium">视觉映射 (Visual)</th>
-                            <th className="p-4 font-medium hidden md:table-cell">听觉映射 (Auditory)</th>
-                            <th className="p-4 font-medium hidden md:table-cell">行为特征</th>
+                            <th className="p-4 font-medium hidden sm:table-cell">积分状态 (Integral State)</th>
+                            <th className="p-4 font-medium">响应策略 (Response)</th>
+                            <th className="p-4 font-medium hidden md:table-cell">视觉参数 (Visual)</th>
+                            <th className="p-4 font-medium hidden md:table-cell">听觉参数 (Auditory)</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-800 text-sm">
                         <tr className="hover:bg-slate-800/30 transition-colors group">
-                            <td className="p-4 font-bold text-white border-l-2 border-transparent group-hover:border-blue-400 block sm:table-cell">
+                            <td className="p-4 font-bold text-slate-300 border-l-2 border-transparent group-hover:border-slate-500 block sm:table-cell">
                                 <span className="sm:hidden text-xs text-slate-500 uppercase block mb-1">State</span>
-                                沉思 / 深度逻辑
+                                积分 &lt; 阈值 (微小波动)
                             </td>
-                            <td className="p-4 text-slate-300">
-                                <span className="md:hidden text-xs text-slate-500 uppercase block mb-1">Visual</span>
-                                低饱和度、冷色调、几何平衡构图
+                            <td className="p-4 text-white font-mono text-xs">
+                                <span className="md:hidden text-xs text-slate-500 uppercase block mb-1">Strategy</span>
+                                [稳态] 无环境变化
                             </td>
-                            <td className="p-4 text-slate-300 hidden md:table-cell">Alpha波频率低频音、极慢 BPM</td>
-                            <td className="p-4 text-slate-300 hidden md:table-cell">减少眨眼，持续目光接触</td>
+                            <td className="p-4 text-slate-400 hidden md:table-cell">保持当前光照，仅面部微表情</td>
+                            <td className="p-4 text-slate-400 hidden md:table-cell">保持背景白噪音</td>
                         </tr>
                         <tr className="hover:bg-slate-800/30 transition-colors group">
-                            <td className="p-4 font-bold text-white border-l-2 border-transparent group-hover:border-orange-400 block sm:table-cell">
+                            <td className="p-4 font-bold text-blue-300 border-l-2 border-transparent group-hover:border-blue-400 block sm:table-cell">
                                 <span className="sm:hidden text-xs text-slate-500 uppercase block mb-1">State</span>
-                                困惑 / 认知冲突
+                                积分 &gt; 阈值 (深思累积)
                             </td>
-                            <td className="p-4 text-slate-300">
-                                <span className="md:hidden text-xs text-slate-500 uppercase block mb-1">Visual</span>
-                                高对比度纹理、非线性光影
+                            <td className="p-4 text-white font-mono text-xs">
+                                <span className="md:hidden text-xs text-slate-500 uppercase block mb-1">Strategy</span>
+                                [渐变态] 5秒平滑过渡
                             </td>
-                            <td className="p-4 text-slate-300 hidden md:table-cell">不协和音程、升调强调</td>
-                            <td className="p-4 text-slate-300 hidden md:table-cell">眉毛微抬 (AU1+2)，头部侧倾</td>
+                            <td className="p-4 text-slate-400 hidden md:table-cell">冷色调渐变，几何平衡构图</td>
+                            <td className="p-4 text-slate-400 hidden md:table-cell">低频增强，BPM 减慢</td>
                         </tr>
                         <tr className="hover:bg-slate-800/30 transition-colors group">
-                            <td className="p-4 font-bold text-white border-l-2 border-transparent group-hover:border-red-400 block sm:table-cell">
+                            <td className="p-4 font-bold text-red-300 border-l-2 border-transparent group-hover:border-red-400 block sm:table-cell">
                                 <span className="sm:hidden text-xs text-slate-500 uppercase block mb-1">State</span>
-                                兴奋 / 宏大叙事
+                                积分 &gt;&gt; 阈值 (顿悟/激烈)
                             </td>
-                            <td className="p-4 text-slate-300">
-                                <span className="md:hidden text-xs text-slate-500 uppercase block mb-1">Visual</span>
-                                高饱和暖色调、动态粒子流速加快
+                            <td className="p-4 text-white font-mono text-xs">
+                                <span className="md:hidden text-xs text-slate-500 uppercase block mb-1">Strategy</span>
+                                [激发态] 瞬态突破
                             </td>
-                            <td className="p-4 text-slate-300 hidden md:table-cell">管弦乐配器、全景空间音频</td>
-                            <td className="p-4 text-slate-300 hidden md:table-cell">瞳孔放大，语速加快</td>
+                            <td className="p-4 text-slate-400 hidden md:table-cell">物理空间虚化，粒子流爆发</td>
+                            <td className="p-4 text-slate-400 hidden md:table-cell">全景音频包裹，管弦乐动机</td>
                         </tr>
                     </tbody>
                 </table>
@@ -364,17 +406,17 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
                   <div className="p-2 bg-polaris-800 rounded border border-slate-700">
                       <FileKey className="w-6 h-6 text-slate-400" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white">附录：核心技术引用</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">附录：核心技术引用 (V3.0)</h3>
               </div>
               
               <div className="grid md:grid-cols-2 gap-4">
                   {[
-                      { id: '[1]', title: 'Simulating Historical Figures', source: 'ResearchGate (2025)', desc: 'Knowledge fidelity patterns in LLMs.' },
-                      { id: '[11]', title: 'The Cognitive Mirror', source: 'Frontiers in Education (2025)', desc: 'Framework for AI metacognition.' },
-                      { id: '[14]', title: 'Latency Perception Thresholds', source: 'IEEE Computer Society', desc: 'Behavioral evidence for <30ms constraints.' },
-                      { id: '[23]', title: 'FastVideoEdit: Consistency Models', source: 'IEEE Xplore', desc: 'Consistency models for efficient generation.' },
-                      { id: '[48]', title: 'Step-by-Step Mastery (DPO)', source: 'arXiv (2025)', desc: 'Enhancing soft constraint following.' },
-                      { id: '[67]', title: 'Virtual Skin & Synesthesia', source: 'OAPEN Library', desc: 'Co-creating 3D materials with AI.' }
+                      { id: '[1]', title: 'Dual-Process Agents', source: 'NeurIPS (2025)', desc: 'System 1/2 in Large Language Agents.' },
+                      { id: '[3]', title: 'Anchor-and-Extend Prompting', source: 'Journal of Learning Analytics', desc: 'Bridging gap strategies for resonance.' },
+                      { id: '[4]', title: 'Opinionated RAG', source: 'arXiv', desc: 'Injecting Persona and Stance into Contexts.' },
+                      { id: '[6]', title: 'Speculative Streaming', source: 'IEEE IoT Journal', desc: 'Edge-Based Speculative Decoding.' },
+                      { id: '[10]', title: 'Zero-Latency Lip Sync', source: 'IEEE Trans. Multimedia', desc: 'Predictive Viseme Generation.' },
+                      { id: '[12]', title: 'Temporal Dynamics in Affect', source: 'IEEE Affective Computing', desc: 'Modeling Hysteresis in Emotion.' }
                   ].map((ref) => (
                       <div key={ref.id} className="flex items-start space-x-4 p-4 rounded border border-slate-800 bg-slate-900/40 hover:border-slate-600 transition-colors">
                           <span className="text-polaris-accent font-mono text-sm">{ref.id}</span>
