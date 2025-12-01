@@ -310,7 +310,7 @@ export const ReportContent: React.FC<ReportContentProps> = ({ onLogout }) => {
                           <div className="text-[10px] font-mono text-purple-400 mb-2 uppercase">System 2</div>
                           <h4 className="font-bold text-white mb-2">洞见与邀约层</h4>
                           <p className="text-xs text-slate-400 mb-3">T-A-Q Structure</p>
-                          <p className="text-sm text-slate-300">执行 Thesis (观点) -> Application (应用) -> Question (邀约) 逻辑。</p>
+                          <p className="text-sm text-slate-300">执行 Thesis (观点) &rarr; Application (应用) &rarr; Question (邀约) 逻辑。</p>
                       </div>
                   </div>
                 </div>
