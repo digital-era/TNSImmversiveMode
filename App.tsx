@@ -9,10 +9,14 @@ const App: React.FC = () => {
     setIsAuthenticated(true);
   };
 
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
   return (
     <>
       {isAuthenticated ? (
-        <ReportContent />
+        <ReportContent onLogout={handleLogout} />
       ) : (
         <Login onLogin={handleLogin} />
       )}
